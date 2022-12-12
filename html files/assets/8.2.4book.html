@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="js files/style.css">
+    <!-- <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon"> -->
+
+    <title>Sorting Visualizer</title>
+</head>
+
+<body>
+    <h1 class="display-5" style="text-align: center;">
+        Count Sort
+    </h1>
+    <div class="container-fluid">
+        <div id="array-container">
+            <div id="array">
+
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="count"></div>
+    </div>
+
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Select file</label>
+        <input class="form-control" type="file" id="formFileMultiple" accept=".txt" multiple>
+    </div>
+    <div class="container-fluid" style="align-items: center; padding-left: 16cm;">
+        <button type="button" class="btn btn-outline-dark btn-lg" style="color: white;" id="sort-btn">Sort</button>
+    </div>
+    <h3 style="text-align: center;" id="complexity"></h3>
+    <h1 style="text-align: centre;">Formula to Calculate</h1>
+    <p>Given range [a...b]. We can find the frequency using frequency array shown above with following formula <br>
+    frequencyArray[b] - frequencyArray[a]
+    </p>
+    <br>
+    <br>
+    <script src="js files/countSort.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script>
+        $('document').ready(function () {
+            delay = WAITING_TIME * Math.pow(2, MAX_SPEED - DEFAULT_SPEED);
+            updateValues();
+            findElementWidth();
+            createArray();
+            $("#sort-btn").click(
+                async function () {
+                    const start = Date.now();
+                   await countSortBook();
+                   const end = Date.now();
+                $("#complexity")[0].innerHTML+= `Complexity is ${end-start} ms`;
+
+                }
+            );
+            $("#speed-slider").attr('min', MIN_SPEED);
+            $("#speed-slider").attr('max', MAX_SPEED);
+            $("#speed-slider").attr('value', DEFAULT_SPEED);
+
+            $("#speed-slider").on('input', function () {
+                delay = WAITING_TIME * Math.pow(2, MAX_SPEED - $(this).val());
+            });
+        });
+    </script>
+</body>

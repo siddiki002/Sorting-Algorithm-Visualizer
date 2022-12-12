@@ -1,0 +1,90 @@
+*:focus, button:focus {
+    outline: none;
+}
+
+body {
+    background-color: rgb(30, 30, 30);
+    font-family: "Catamaran", sans-serif;
+    color: #ccc;
+}
+#array-container {
+    height: auto;
+    width: auto;
+    margin-top: 0cm;
+    align-self: center;
+    padding-top: 0cm;
+    /* display: flex; */
+    /* flex-direction: column-reverse; */
+    /* position: relative; */
+}
+
+#array {
+    margin: 1em auto;
+}
+
+.element {
+    display: inline-block;
+    border-radius: 5px;
+    color: azure;
+}
+
+#algo-container {
+    max-width: 2000px;
+    margin: 1em auto;
+}
+.slider
+{
+    align-items: center;
+    padding-left: 16cm;    
+}
+#speed-label
+{
+    size: 22px;    
+}
+
+.block {
+    width: 28px;
+    background-color: #6b5b95;
+    position: absolute;
+    bottom: 0px;
+    transition: 0.2s all ease;
+  }
+    
+  .block2 {
+    width: 28px;
+    background-color: darkgray;
+    position: absolute;
+    transition: 0.2s all ease;
+  }
+  .block_id {
+    position: absolute;
+    color: white;
+    margin-top: -30px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 5px;
+    /* text-align: center; */
+  }
+  .block_id2 {
+    position: absolute;
+    color: white;
+    margin-top: 22px;
+    width: 100%;
+    text-align: center;
+  }
+    
+  .block_id3 {
+    position: absolute;
+    color: white;
+    margin-top: 1px;
+    width: 100%;
+    text-align: center;
+  }
+    
+  #count {
+    height: 200px;
+    width: 300px;
+    margin: auto;
+    padding-right: 15cm;
+    padding-top: 2cm;
+  }
