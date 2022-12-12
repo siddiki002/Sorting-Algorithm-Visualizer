@@ -22,4 +22,8 @@ There are two more sorting algorithm which are not standard. Hence their problem
 3. Insert a file (.txt) with comma seperated values
 4. Click on sort button
 
+### Directory
 
+- root: html files
+- html files/assets: contains the html files for all the sorting algorithm
+- html files/assets/js files: contains all the javascript files.
