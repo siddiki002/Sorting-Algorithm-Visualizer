@@ -15,12 +15,9 @@ Below is the list of the algorithm it shows
 
 There are two more sorting algorithm which are not standard. Hence their problem statement is given in the start of the page
 
-### How to use
+Click on below link to see the webpages in action:
+<a href = "https://siddiki002.github.io/Sorting-Algorithm-Visualizer/" >Sorting algorithm visualizer</a>
 
-1. Open the index.html file on live server
-2. Select the sorting algorithm
-3. Insert a file (.txt) with comma seperated values
-4. Click on sort button
 
 ### Directory
 
